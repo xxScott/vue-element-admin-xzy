@@ -1,0 +1,61 @@
+﻿body {
+}
+
+.container {
+    /*margin: 0 0.45rem;*/
+    font-size: 0.28rem;
+    background: #f2f2f2;
+    height: 100vh;
+}
+
+.final-title {
+    background: #f34343;
+    color: #fff;
+    font-size: 0.34rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.to-meal{
+    line-height: 1rem;
+    padding: 0 0.45rem;
+    margin: 0.5rem 0;
+    background: #fff;
+    position: relative;
+}
+
+.to-arrow-right{
+    height: 0.4rem;
+    position: absolute;
+    right: 0.35rem;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.remind {
+    background: #fff;
+    padding: 0 0.45rem;
+}
+
+.remind-title-wrapper{
+    line-height: 1rem;
+    border-bottom: 0.01rem solid #ccc;
+}
+
+.remind-title{
+    /*margin-left:0.45rem;*/
+}
+
+.remind-content {
+    
+}
+
+.remind-content-title {
+    line-height: 1rem;
+}
+
+.remind-content-time {
+    line-height: 1rem;
+    text-align: center;
+    padding-bottom: 0.2rem;
+}

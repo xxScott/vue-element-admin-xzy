@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{660541C6-F8ED-45F8-8F36-CE0805F898C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\jscn\mboss\DAL\DLL\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\jscn\mboss\DAL\DLL\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\jscn\mboss\DAL\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MyOrm, Version=0.3.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\dll\MyOrm.dll</HintPath>
+    </Reference>
+    <Reference Include="MyOrm.Common, Version=0.3.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\dll\MyOrm.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Document\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Attribute\EnumDisplayName.cs" />
+    <Compile Include="Attribute\LogAttribute.cs" />
+    <Compile Include="Attribute\ServiceAttribute.cs" />
+    <Compile Include="Attribute\ServiceLogAttribute.cs" />
+    <Compile Include="Attribute\ServicePermissionAttribute.cs" />
+    <Compile Include="Attribute\TransactionAttribute.cs" />
+    <Compile Include="CustomException.cs" />
+    <Compile Include="DAO\Attendance\AttendParamDAO.cs" />
+    <Compile Include="DAO\Attendance\AttendPeriodDataDAO.cs" />
+    <Compile Include="DAO\Attendance\AttendStorageDAO.cs" />
+    <Compile Include="DAO\CObjectDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeAwardDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeBaseDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeChangeStationDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeContractDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeLeaveDAO.cs" />
+    <Compile Include="DAO\Employee\EmployeeRalationDAO.cs" />
+    <Compile Include="DAO\Attendance\BarCodeDAO.cs" />
+    <Compile Include="DAO\Global\ModulesDAO.cs" />
+    <Compile Include="DAO\Global\ParamsDAO.cs" />
+    <Compile Include="DAO\Global\ParamsTypeDAO.cs" />
+    <Compile Include="DAO\Global\RightsDAO.cs" />
+    <Compile Include="DAO\Global\RolesDAO.cs" />
+    <Compile Include="DAO\Global\UserInRoleDAO.cs" />
+    <Compile Include="DAO\Global\UsersDAO.cs" />
+    <Compile Include="DAO\Global\VerfiyCodesDAO.cs" />
+    <Compile Include="DAO\Human\MakeClassDataDAO.cs" />
+    <Compile Include="DAO\Human\MakeClassLogDAO.cs" />
+    <Compile Include="DAO\Human\MakeClassPlanDAO.cs" />
+    <Compile Include="DAO\Salary\SalaryAssessDAO.cs" />
+    <Compile Include="DAO\Salary\SalaryBaseDAO.cs" />
+    <Compile Include="DAO\Salary\SalaryChangeDAO.cs" />
+    <Compile Include="DAO\Salary\SalaryChangeProjectDAO.cs" />
+    <Compile Include="DAO\Salary\SalaryAssessDataDAO.cs" />
+    <Compile Include="DAO\Salary\SalarySettleDAO.cs" />
+    <Compile Include="DAO\Setting\CompanysDAO.cs" />
+    <Compile Include="DAO\Setting\GroupsDAO.cs" />
+    <Compile Include="DAO\Setting\DeptsDAO.cs" />
+    <Compile Include="DAO\Setting\PeriodDAO.cs" />
+    <Compile Include="DAO\Setting\StoresDAO.cs" />
+    <Compile Include="DAO\Setting\WorkStationsDAO.cs" />
+    <Compile Include="DAO\Setting\FormationsDAO.cs" />
+    <Compile Include="DAO\Setting\ClassesDAO.cs" />
+    <Compile Include="DAO\Setting\SalaryProjectsDAO.cs" />
+    <Compile Include="DAO\Setting\CompanyUsersDAO.cs" />
+    <Compile Include="DAO\WeChat\AccessTokenDAO.cs" />
+    <Compile Include="DAO\WeChat\AccountDAO.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="Entity\Attendance.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\Global.cs" />
+    <Compile Include="Entity\Human.cs" />
+    <Compile Include="Entity\Salary.cs" />
+    <Compile Include="Entity\Setting.cs" />
+    <Compile Include="Entity\WeChat.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="IEntityService.cs" />
+    <Compile Include="IServiceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBase.cs" />
+    <Compile Include="ServiceDescription.cs" />
+    <Compile Include="ServiceFactory.cs" />
+    <Compile Include="ServiceInterceptor.cs" />
+    <Compile Include="Service\Attendance\AttendParamService .cs" />
+    <Compile Include="Service\Attendance\AttendPeriodDataService.cs" />
+    <Compile Include="Service\Attendance\AttendStorageService.cs" />
+    <Compile Include="Service\Attendance\EmployeeAwardService.cs" />
+    <Compile Include="Service\Employee\EmployeeAwardService.cs" />
+    <Compile Include="Service\Employee\EmployeeBaseService.cs" />
+    <Compile Include="Service\Employee\EmployeeChangeStationService.cs" />
+    <Compile Include="Service\Employee\EmployeeContractService.cs" />
+    <Compile Include="Service\Employee\EmployeeLeaveService.cs" />
+    <Compile Include="Service\Employee\EmployeeRalationService.cs" />
+    <Compile Include="Service\Global\ModulesService.cs" />
+    <Compile Include="Service\Global\ParamsService.cs" />
+    <Compile Include="Service\Global\ParamsTypeService.cs" />
+    <Compile Include="Service\Global\RightsService.cs" />
+    <Compile Include="Service\Global\RolesService.cs" />
+    <Compile Include="Service\Global\UserInRoleService.cs" />
+    <Compile Include="Service\Global\UsersService.cs" />
+    <Compile Include="Service\Global\VerifyCodesService.cs" />
+    <Compile Include="Service\Human\MakeClassDataService.cs" />
+    <Compile Include="Service\Human\MakeClassLogService.cs" />
+    <Compile Include="Service\Human\MakeClassPlanService.cs" />
+    <Compile Include="Service\Salary\SalaryAssessService.cs" />
+    <Compile Include="Service\Salary\SalaryBaseService.cs" />
+    <Compile Include="Service\Salary\SalaryChangeProjectService.cs" />
+    <Compile Include="Service\Salary\SalaryChangeService.cs" />
+    <Compile Include="Service\Salary\SalaryAssessDataService.cs" />
+    <Compile Include="Service\Salary\SalarySettleService.cs" />
+    <Compile Include="Service\Setting\ClassesService.cs" />
+    <Compile Include="Service\Setting\CompanyService.cs" />
+    <Compile Include="Service\Setting\GroupsService.cs" />
+    <Compile Include="Service\Setting\DeptsService.cs" />
+    <Compile Include="Service\Setting\FormationsService.cs" />
+    <Compile Include="Service\Setting\PeriodService.cs" />
+    <Compile Include="Service\Setting\StoresService.cs" />
+    <Compile Include="Service\Setting\WorkStationsService.cs" />
+    <Compile Include="Service\Setting\SalaryProjectsService.cs" />
+    <Compile Include="Service\Setting\CompanyUsersService.cs" />
+    <Compile Include="Service\WeChat\AccessTokenService.cs" />
+    <Compile Include="Service\WeChat\AccountService.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Castle.Core.dll" />
+    <Content Include="DLL\Castle.Windsor.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\MyOrm.Common.dll" />
+    <Content Include="DLL\MyOrm.Common.xml" />
+    <Content Include="DLL\MyOrm.dll" />
+    <Content Include="DLL\MyOrm.XML" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Newtonsoft.Json.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+#departmentalPersonnelManagementId .roles-table {
+    margin-top: 20px;
+}
+#departmentalPersonnelManagementId .bottonClass {
+    margin-bottom: 20px;
+}
+
+.ui-fas {
+    height: 190px;
+    overflow: auto;
+}

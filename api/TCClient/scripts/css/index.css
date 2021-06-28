@@ -1,0 +1,170 @@
+﻿*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    border: none;
+    list-style: none;
+}
+body{
+    background-color:#efefef;
+}
+.header {
+    width:7.5rem;
+    height:1rem;
+    background-color:#ffffff;
+    text-align:center;
+    position:relative;
+    border-bottom:0.02rem solid #efefef;
+}
+.header .header-back{
+    float:left;
+    width:0.5rem;
+    height:0.5rem;
+    top:0.25rem;
+    left:0.25rem;
+    background:url("../images/back.png") no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+}
+.header .header-title{
+    margin:auto 0;
+    font-size:0.4rem;
+    line-height:1rem;
+}
+.clear-float{
+    clear:both;
+}
+.main-select{
+    width:7.5rem;
+    height:3rem;
+    background-color:#ffffff;
+    margin-bottom:0.5rem;
+}
+.main-select ul{
+    width:1.8rem;
+    height:2rem;
+    float:left;
+    list-style:none;
+    margin-left:0.525rem;
+    margin-top:0.5rem;
+}
+.main-select ul .main-select-icon{
+    display:block;
+    width:100%;
+    height:1.5rem;
+}
+.main-select ul .main-select-content{
+    display:block;
+    width:100%;
+    height:0.5rem;
+    font-weight:bold;
+    font-size:0.25rem;
+    text-align:center;
+}
+.first-icon{
+    background:url("../images/myCheck.png") no-repeat;
+    background-size:70% 70%;
+    background-position:center center;
+}
+.first-icon-active {
+    background: url("../images/myCheckActive.png") no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+}
+.second-icon{
+    background:url("../images/myStart.png") no-repeat;
+    background-size:70% 70%;
+    background-position:center center;
+}
+.second-icon-active {
+    background: url("../images/myStartActive.png") no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+}
+.third-icon{
+    background:url("../images/copy.png") no-repeat;
+    background-size:70% 70%;
+    background-position:center center;
+}
+.third-icon-active {
+    background: url("../images/copyActive.png") no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+}
+.wrapper{
+    width:7.5rem;
+    background-color:#fff;
+    margin-bottom:0.3rem;
+}
+.wrapper .first-select{
+    width:100%;
+    height:0.8rem;
+    font-size:0.4rem;
+    line-height:0.8rem;
+    position:relative;
+    background-color:#fff;
+}
+.wrapper #check-list li{
+    background-color:#fff;
+}
+.wrapper .first-select p{
+    padding-left:0.1rem;
+}
+.wrapper .first-select .arrow-right{
+    width:0.4rem;
+    height:0.4rem;
+    background:url("../images/arrow-right.png") no-repeat;
+    background-size:90% 90%;
+    background-position:center center;
+    position:absolute;
+    top:0.2rem;
+    right:0.2rem;
+}
+.wrapper .first-select .arrow-down{
+    width:0.4rem;
+    height:0.4rem;
+    background:url("../images/arrow-down.png") no-repeat;
+    background-size:90% 90%;
+    background-position:center center;
+    position:absolute;
+    top:0.2rem;
+    right:0.2rem;
+}
+.point-green{
+    display:inline-block;
+    width:0.2rem;
+    height:0.2rem;
+    border-radius: 0.2rem;
+    background-color:#449c36;
+    margin-left: 0.1rem;
+    margin-bottom: 0.05rem;
+}
+.point-yellow{
+    display:inline-block;
+    width:0.2rem;
+    height:0.2rem;
+    border-radius: 0.2rem;
+    background-color:#e69e00;
+    margin-left: 0.1rem;
+    margin-bottom: 0.05rem;
+}
+.point-red{
+    display:inline-block;
+    width:0.2rem;
+    height:0.2rem;
+    border-radius: 0.2rem;
+    background-color:#ff3053;
+    margin-left: 0.1rem;
+    margin-bottom: 0.05rem;
+}
+#check-list{
+    display:none;
+}
+#check-list li{
+    width:100%;
+    height:0.8rem;
+    font-size:0.4rem;
+    line-height:0.8rem;
+    position:relative;
+    background-color:#fff;
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/js/jquery-1.8.3.js"></script>
+    <script src="scripts/js/login.js"></script>
+    <script src="scripts/js/myconst.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- head 中 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+
+    <link href="scripts/css/reset.css" rel="stylesheet" />
+    <link href="scripts/css/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login">
+                <span class="login-tip">用户名</span>
+                <input class="login-input" id="username" type="text" name="name" value="" placeholder="请输入用户名" />
+            </div>
+            <div class="login">
+                <span class="login-tip">密码</span>
+                <input class="login-input" id="userpsw" type="text" name="psw" value="" placeholder="请输入密码" />
+            </div>
+        </div>
+        <button onclick="save_data()" class="login-btn">登&nbsp;&nbsp;录</button>
+    </div>
+
+    <!-- body 最后 -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+</body>
+</html>

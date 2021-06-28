@@ -1,0 +1,53 @@
+﻿body {
+}
+
+.container {
+    margin: 0 0.45rem;
+}
+
+.login-wrapper {
+    margin-top: 3rem;
+}
+
+.login{
+    padding: 0.2rem 0;
+    border-bottom: 0.02rem solid #f3f3f3;
+}
+
+.login-tip{
+    display:inline-block;
+    width:1.1rem;
+    font-size:0.28rem;
+}
+
+#login-input {
+    font-size: 0.28rem;
+    margin-bottom:0.05rem;
+}
+
+.login-btn {
+    width: 100%;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 1.3rem;
+    border-radius: 0.2rem;
+    background: #1aad19;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: 0.28rem;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.28rem;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 0.28rem;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 0.28rem;
+}

@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TCClient", "TCClient\", "{2E709D2B-E622-4469-A9C6-047B1DBBC04B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{47cd8f07-6f18-49a6-934c-03714249175e}|Utilities.dll;{660541C6-F8ED-45F8-8F36-CE0805F898C1}|DAL.dll;{D1413718-4399-4ACA-9F06-837CC022740B}|Models.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49799"
+		Debug.AspNetCompiler.PhysicalPath = "TCClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49799\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49799"
+		Release.AspNetCompiler.PhysicalPath = "TCClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49799\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49799"
+		SlnRelativePath = "TCClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.移动客户端", "1.移动客户端", "{0F8A4F6B-FCA3-40EB-A1DD-A7D75F134240}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.API", "2.API", "{3AF86D7D-474D-4B92-B28E-E6561D3E363B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters", "Adapters\Adapters.csproj", "{B56E6D40-DB80-4987-8306-B45D2AC5AAF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaiMoMo", "CaiMoMo\CaiMoMo.csproj", "{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{660541C6-F8ED-45F8-8F36-CE0805F898C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCAPP", "TCAPP\TCAPP.csproj", "{C58F9917-9B88-40EF-B2D1-579A47EB2D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{D1413718-4399-4ACA-9F06-837CC022740B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleService", "ScheduleService\ScheduleService.csproj", "{36047F03-181E-487C-89A6-4154338600A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{47CD8F07-6F18-49A6-934C-03714249175E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.接口", "1.接口", "{C258C965-65D7-4621-A1C8-1634187119E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib", "lib\lib.csproj", "{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E709D2B-E622-4469-A9C6-047B1DBBC04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E709D2B-E622-4469-A9C6-047B1DBBC04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E709D2B-E622-4469-A9C6-047B1DBBC04B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E709D2B-E622-4469-A9C6-047B1DBBC04B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B56E6D40-DB80-4987-8306-B45D2AC5AAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56E6D40-DB80-4987-8306-B45D2AC5AAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56E6D40-DB80-4987-8306-B45D2AC5AAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56E6D40-DB80-4987-8306-B45D2AC5AAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{660541C6-F8ED-45F8-8F36-CE0805F898C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{660541C6-F8ED-45F8-8F36-CE0805F898C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{660541C6-F8ED-45F8-8F36-CE0805F898C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{660541C6-F8ED-45F8-8F36-CE0805F898C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58F9917-9B88-40EF-B2D1-579A47EB2D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58F9917-9B88-40EF-B2D1-579A47EB2D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58F9917-9B88-40EF-B2D1-579A47EB2D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58F9917-9B88-40EF-B2D1-579A47EB2D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1413718-4399-4ACA-9F06-837CC022740B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1413718-4399-4ACA-9F06-837CC022740B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1413718-4399-4ACA-9F06-837CC022740B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1413718-4399-4ACA-9F06-837CC022740B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36047F03-181E-487C-89A6-4154338600A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36047F03-181E-487C-89A6-4154338600A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36047F03-181E-487C-89A6-4154338600A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36047F03-181E-487C-89A6-4154338600A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CD8F07-6F18-49A6-934C-03714249175E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CD8F07-6F18-49A6-934C-03714249175E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CD8F07-6F18-49A6-934C-03714249175E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CD8F07-6F18-49A6-934C-03714249175E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E709D2B-E622-4469-A9C6-047B1DBBC04B} = {0F8A4F6B-FCA3-40EB-A1DD-A7D75F134240}
+		{B56E6D40-DB80-4987-8306-B45D2AC5AAF1} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{C181245D-266E-4FB8-ACCA-6EC2CF4FD4CB} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{660541C6-F8ED-45F8-8F36-CE0805F898C1} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{C58F9917-9B88-40EF-B2D1-579A47EB2D00} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{D1413718-4399-4ACA-9F06-837CC022740B} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{36047F03-181E-487C-89A6-4154338600A0} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{47CD8F07-6F18-49A6-934C-03714249175E} = {C258C965-65D7-4621-A1C8-1634187119E1}
+		{C258C965-65D7-4621-A1C8-1634187119E1} = {3AF86D7D-474D-4B92-B28E-E6561D3E363B}
+		{55ACC544-B1AC-4FA3-B2E1-2B995F8F042C} = {C258C965-65D7-4621-A1C8-1634187119E1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F224625-4998-419E-B4B4-38CF63E4DC1A}
+	EndGlobalSection
+EndGlobal

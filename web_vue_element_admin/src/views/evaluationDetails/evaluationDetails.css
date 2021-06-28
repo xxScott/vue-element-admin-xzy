@@ -1,0 +1,17 @@
+#evaluationDetailsId .roles-table {
+    margin-top: 20px;
+}
+#evaluationDetailsId .bottonClass {
+    margin-bottom: 20px;
+}
+.table-expand {
+    font-size: 0;
+}
+.table-expand label {
+    width: 90px;
+    color: #99a9bf;
+}
+.table-expand .el-form-item {
+    margin-bottom: 0;
+    width: 50%;
+}

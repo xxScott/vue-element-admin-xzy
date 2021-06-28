@@ -1,0 +1,295 @@
+*
+{
+	font-size: 12px;
+	font-family: 'Tahoma', 'Verdana', '微软雅黑', '宋体';
+}
+
+body
+{
+	margin: 0px auto;
+	width: 100%;
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	-webkit-text-size-adjust: none;
+}
+
+/***********/
+
+.txt_login
+{
+	width: 200px;
+	border: 1px solid #4D4D4D;
+	background-color: #4D4D4D;
+	color: #fff;
+	font-size: 14pt;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#remember_password
+{
+	color: #fff;
+}
+
+#forget_password
+{
+	color: #fff;
+	padding-right: 20px;
+}
+
+.submit_login
+{
+	display: block;
+	height: 40px;
+	width: 213px;
+	background-color: #ff6600;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12pt;
+}
+
+	.submit_login:hover
+	{
+		color: #fff;
+		text-decoration: none;
+	}
+
+/***********/
+
+.menu_item
+{
+	width: 150px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	background-color: #4E4C4D;
+	margin: 3px;
+	text-align: center;
+	float: left;
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: 13pt;
+	line-height: 250px;
+}
+
+.menu_item_none
+{
+	width: 150px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	background-color: #777777;
+	margin: 3px;
+	text-align: center;
+	float: left;
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: 13pt;
+	line-height: 250px;
+}
+
+/***********/
+
+a
+{
+	color: Black;
+	text-decoration: none;
+}
+
+	a:hover
+	{
+		color: Red;
+		text-decoration: underline;
+	}
+
+.textbox03
+{
+	border: #878787 1px solid;
+	padding: 4px 3px;
+	font: Verdana, Geneva, sans-serif,宋体;
+	line-height: 14px;
+	background-color: #fff;
+	height: auto;
+	font-size: 14px;
+	font-weight: bold;
+	width: 190px;
+}
+
+.txt01
+{
+	font: Verdana, Geneva, sans-serif,宋体;
+	padding: 3px 2px 2px 2px;
+	border-width: 1px;
+	border-color: #ddd;
+	color: #000;
+}
+
+.txt
+{
+	border: #878787 1px solid;
+	padding: 4px 3px;
+	font: Verdana, Geneva, sans-serif,宋体;
+	line-height: 14px;
+	background-color: #fff;
+	height: auto;
+	font-size: 14px;
+}
+
+.footer
+{
+	text-align: center;
+	color: #fff;
+	margin: 0px;
+	padding: 0px;
+	line-height: 40px;
+}
+
+.head a
+{
+	color: White;
+	text-decoration: underline;
+}
+
+/***********/
+
+.panel-header,
+.panel-body
+{
+	border-width: 0px;
+}
+
+.panel-header
+{
+	padding: 0px;
+	position: relative;
+}
+
+.panel-title
+{
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	height: 60px;
+	line-height: 60px;
+	background-image: url(../Images/App/navi_logo.png);
+	background-repeat: no-repeat;
+	background-position: 10px 5px;
+	background-color: #333333;
+	padding-left: 70px;
+	border-width: 0px;
+}
+
+.accordion .accordion-header-selected
+{
+	background: #333333;
+}
+
+/***********/
+
+.navlist
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #333333;
+}
+
+	.navlist li
+	{
+		padding: 0px;
+		border-bottom: 1px solid #444444;
+		cursor: pointer;
+	}
+
+		.navlist li a
+		{
+			line-height: 40px;
+			padding-left: 20px;
+			color: #fff;
+		}
+
+		.navlist li div
+		{
+			margin: 0px 0px;
+			font-size: 16pt;
+			border-left: 3px solid transparent;
+		}
+
+			.navlist li div.hover
+			{
+				background: #444444;
+				border-left: 3px solid #e26c24;
+				background-image: url(/Images/App/bg_menu_selected.png);
+				background-repeat: no-repeat;
+				background-position: 170px 15px;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+				.navlist li div.hover a
+				{
+					color: #fff;
+					text-decoration: none;
+				}
+
+			.navlist li div.selected
+			{
+				background: #444444;
+				cursor: default;
+				border-left: 3px solid #e26c24;
+				background-image: url(/Images/App/bg_menu_selected.png);
+				background-repeat: no-repeat;
+				background-position: 170px 15px;
+			}
+
+				.navlist li div.selected a
+				{
+					color: #fff;
+				}
+
+		.navlist li span
+		{
+			font-size: 11pt;
+		}
+
+.third_ul
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display: none;
+}
+
+	.third_ul li
+	{
+		padding-left: 20px;
+	}
+
+.qy_top2bg
+{
+	background-image: url(/Images/bg_top.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+}
+
+
+.qy_topk2px
+{
+	color: #000000;
+	font-family: Arial;
+}
+
+
+.qy_date
+{
+	color: #000000;
+	font-family: Arial;
+}

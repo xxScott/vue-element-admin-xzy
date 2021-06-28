@@ -1,0 +1,11 @@
+#departmentManagementId .roles-table {
+    margin-top: 20px;
+}
+#departmentManagementId .bottonClass {
+    margin-bottom: 20px;
+}
+
+.ui-fas {
+    height: 215px;
+    overflow: auto;
+}

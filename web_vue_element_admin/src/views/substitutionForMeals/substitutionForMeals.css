@@ -1,0 +1,58 @@
+#substitutionForMealsId .text {
+    font-size: 14px;
+}
+
+#substitutionForMealsId .item {
+    margin-bottom: 18px;
+}
+
+#substitutionForMealsId .box-card {
+    width: 480px;
+}
+
+#substitutionForMealsId .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+#substitutionForMealsId .clearfix:before,
+#substitutionForMealsId .clearfix:after {
+    display: table;
+    content: "";
+}
+  
+#substitutionForMealsId .clearfix:after {
+    clear: both
+}
+
+#substitutionForMealsId .el-header {
+    background-color: #B3C0D1;
+    color: #333;
+    line-height: 60px;
+}
+  
+#substitutionForMealsId .el-aside {
+    color: #333;
+}
+
+#substitutionForMealsId .shadowToBox {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+
+#substitutionForMealsId .stepClass {
+    height: 350px;
+    margin: 20px 50px;
+    padding-top: 15px;
+}
+
+#substitutionForMealsId .tableClassCanSelect {
+    margin-top: 20px;
+}
+
+#substitutionForMealsId .collapseClass {
+    margin-bottom: -25px;
+}
+
+#substitutionForMealsId {
+    margin-top:25px;
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/js/jquery-1.8.3.js"></script>
+    <script src="../scripts/js/takeMeal.js"></script>
+    <script src="../scripts/js/myconst.js"></script>
+    <script src="../scripts/js/ExternFunc.js"></script>
+    <!-- head 中 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+</head>
+<body  style="background: #fbfbfb;">
+    <div>
+        <div class="weui-msg" style="background: #fff;">
+            <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+            <div class="weui-msg__text-area">
+                <h2 class="weui-msg__title">订餐成功</h2>
+                <p class="weui-msg__desc" id="qr_tip">请凭二维码就餐</p>
+            </div>
+            <div class="weui-msg__opr-area" style="padding-bottom:35px;">
+                <p class="weui-btn-area">
+                    <img id="qrCode" class="code_img"/>
+                    <!--<img src="../scripts/images/erweima.png" class="code_img" />-->
+
+                </p>
+                <div id="code_number" class="code_number">订单编号：<span id="orderNum"></span></div>
+            </div>
+        </div>
+
+        <div class="weui-cells__title">订单详情</div>
+        <div class="weui-cells" style="background: #fff;">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>大排</p>
+                </div>
+                <div class="weui-cell__ft">
+
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>鱼头</p>
+                </div>
+
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>番茄鸡蛋</p>
+                </div>
+                <div class="weui-cell__ft">
+
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>韭菜肉丝</p>
+                </div>
+                <div class="weui-cell__ft">
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-bottom"></div>
+    </div>
+
+
+        <!--<button onclick="update_qrcode()">扫码成功</button>-->
+        <!-- body 最后 -->
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+</body>
+</html>
+<style>
+    .code_img{
+        width:65%;
+    }
+    .code_number {
+        border: 1px solid #ccc;
+        margin: 15px 35px;
+        padding: 8px 0;
+    }
+    .bg-bottom{
+        height:35px;
+        width: 100%;
+    }
+</style>

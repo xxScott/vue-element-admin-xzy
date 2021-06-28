@@ -1,0 +1,1017 @@
+public class tc_food
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 菜名(关联菜名表)
+        /// </summary>
+        public string MenuId { get; set; }
+        /// <summary>
+        /// 图片(关联图片表)
+        /// </summary>
+        public string ImageId { get; set; }
+        /// <summary>
+        /// 餐别(关联餐别表)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 简介
+        /// </summary>
+        public string Brief { get; set; }
+        /// <summary>
+        /// 菜品状态1.已售空2.未售空
+        /// </summary>
+        public numeric Status { get; set; }
+        /// <summary>
+        /// 菜品类型1.大荤2.素
+        /// </summary>
+        public numeric Type { get; set; }
+        /// <summary>
+        /// 时间1.本周2.下周
+        /// </summary>
+        public numeric Time { get; set; }
+        /// <summary>
+        /// 库存
+        /// </summary>
+        public numeric Inventory { get; set; }
+        /// <summary>
+        /// 已订
+        /// </summary>
+        public numeric Order { get; set; }
+        /// <summary>
+        /// 限订
+        /// </summary>
+        public numeric Restrict { get; set; }
+        /// <summary>
+        /// 价格
+        /// </summary>
+        public numeric Price { get; set; }
+    }
+
+public class tc_image
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 图片名字
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 图片路径
+        /// </summary>
+        public string Url { get; set; }
+    }
+
+public class tc_menu
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 菜名字
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 分量
+        /// </summary>
+        public string Portion { get; set; }
+    }
+
+public class tc_order
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        public string OrderNumber { get; set; }
+        /// <summary>
+        /// 订单支付金额
+        /// </summary>
+        public string OederPrice { get; set; }
+        /// <summary>
+        /// 订单状态1.已支付2.未支付
+        /// </summary>
+        public string OrderStatus { get; set; }
+    }
+
+public class tc_orderDetailed
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 关联订单表
+        /// </summary>
+        public string OrderId { get; set; }
+        /// <summary>
+        /// 部门(关联部门表 )
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 员工(关联员工表)
+        /// </summary>
+        public string StaffId { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 关联菜谱表(food)
+        /// </summary>
+        public string FoodId { get; set; }
+        /// <summary>
+        /// 单价
+        /// </summary>
+        public numeric Price { get; set; }
+        /// <summary>
+        /// 实付
+        /// </summary>
+        public numeric Practical { get; set; }
+        /// <summary>
+        /// 取餐0.已取1.未取
+        /// </summary>
+        public numeric Fetch { get; set; }
+        /// <summary>
+        /// 评星
+        /// </summary>
+        public numeric Stars { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark { get; set; }
+    }
+
+public class tc_parentEntity
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+    }
+
+public class tc_personnel
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 项目(关联项目表)
+        /// </summary>
+        public string ProjectId { get; set; }
+        /// <summary>
+        /// 员工(关联员工表)
+        /// </summary>
+        public string StaffId { get; set; }
+    }
+
+public class tc_project
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 关联部门
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 关联订餐表
+        /// </summary>
+        public string ReservationId { get; set; }
+        /// <summary>
+        /// 项目号
+        /// </summary>
+        public string Code { get; set; }
+        /// <summary>
+        /// 消费金额
+        /// </summary>
+        public string Money { get; set; }
+    }
+
+public class tc_reservation
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 关联菜谱表(food)
+        /// </summary>
+        public string FoodId { get; set; }
+        /// <summary>
+        /// 价格
+        /// </summary>
+        public string Money { get; set; }
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public string Amount { get; set; }
+        /// <summary>
+        /// 订餐开始时间
+        /// </summary>
+        public string StartTime { get; set; }
+        /// <summary>
+        /// 订餐结束时间
+        /// </summary>
+        public string EndTime { get; set; }
+    }
+
+public class tc_staff
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 部门名称(关联部门表)
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 员工号
+        /// </summary>
+        public numeric Code { get; set; }
+        /// <summary>
+        /// 员工姓名
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 员工手机号
+        /// </summary>
+        public numeric Phone { get; set; }
+    }
+
+ public class tc_substitution
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 部门(关联部门表 )
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 员工(关联员工表)
+        /// </summary>
+        public string StaffId { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 关联菜谱表(food)
+        /// </summary>
+        public string FoodId { get; set; }
+    }
+
+ public class tc_summaryByDay
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public numeric Number { get; set; }
+        /// <summary>
+        /// 单价
+        /// </summary>
+        public numeric Price { get; set; }
+        /// <summary>
+        /// 已领
+        /// </summary>
+        public numeric Have { get; set; }
+    }
+
+ public class tc_accountManagement
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 用户名
+        /// </summary>
+        public string UserName { get; set; }
+        /// <summary>
+        /// 密码
+        /// </summary>
+        public string Password { get; set; }
+        /// <summary>
+        /// 电子邮件
+        /// </summary>
+        public string Email { get; set; }
+        /// <summary>
+        /// 手机号
+        /// </summary>
+        public numeric Phone { get; set; }
+        /// <summary>
+        /// 权限1.管理员2.用户
+        /// </summary>
+        public numeric Jurisdiction { get; set; }
+    }
+
+public class tc_appraise
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 员工(关联员工表)
+        /// </summary>
+        public string StaffId { get; set; }
+        /// <summary>
+        /// 关联订单表
+        /// </summary>
+        public string OrderId { get; set; }
+        /// <summary>
+        /// 关联图片表
+        /// </summary>
+        public string ImageId { get; set; }
+        /// <summary>
+        /// 评价1.好评2.一般3.差评
+        /// </summary>
+        public numeric Type { get; set; }
+    }
+
+
+public class tc_company
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 公司名称
+        /// </summary>
+        public string CompanyName { get; set; }
+        /// <summary>
+        /// 公司logo关联图片表
+        /// </summary>
+        public string ImageId { get; set; }
+        /// <summary>
+        /// 公司简介
+        /// </summary>
+        public string Introduction { get; set; }
+    }
+
+public class tc_department
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 部门编号
+        /// </summary>
+        public numeric Code { get; set; }
+        /// <summary>
+        /// 部门名称
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 部门地点
+        /// </summary>
+        public string Loc { get; set; }
+    }
+
+public class tc_departmentSummary
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 部门(关联部门表 )
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public string Number { get; set; }
+        /// <summary>
+        /// 金额
+        /// </summary>
+        public string Money { get; set; }
+    }
+
+ public class tc_dishesSummary
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 关联菜谱表(food)
+        /// </summary>
+        public string FoodId { get; set; }
+        /// <summary>
+        /// 评价人数
+        /// </summary>
+        public numeric Evaluate { get; set; }
+        /// <summary>
+        /// 单价
+        /// </summary>
+        public numeric Price { get; set; }
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public numeric Number { get; set; }
+    }
+
+ public class tc_evaluationDetails
+    {
+        /// <summary>
+        /// 唯一编号
+        /// </summary>
+        public string ID { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime AddTime { get; set; }
+        /// <summary>
+        /// 创建人员
+        /// </summary>
+        public string AddUser { get; set; }
+        /// <summary>
+        /// 创建人员ID
+        /// </summary>
+        public string AddUserID { get; set; }
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// 更新人员
+        /// </summary>
+        public string UpdateUser { get; set; }
+        /// <summary>
+        /// 更新人员ID
+        /// </summary>
+        public string UpdateUserID { get; set; }
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bit IsEnable { get; set; }
+        /// <summary>
+        /// 部门(关联部门表 )
+        /// </summary>
+        public string DepartmentId { get; set; }
+        /// <summary>
+        /// 员工(关联员工表)
+        /// </summary>
+        public string StaffId { get; set; }
+        /// <summary>
+        /// 关联餐别表(category)
+        /// </summary>
+        public string CategoryId { get; set; }
+        /// <summary>
+        /// 关联菜谱表(food)
+        /// </summary>
+        public string FoodId { get; set; }
+        /// <summary>
+        /// 单价
+        /// </summary>
+        public numeric Price { get; set; }
+        /// <summary>
+        /// 评星
+        /// </summary>
+        public numeric Stars { get; set; }
+        /// <summary>
+        /// 评语
+        /// </summary>
+        public string Comment { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark { get; set; }
+    }
+

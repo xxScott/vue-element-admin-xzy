@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CaiMoMo_TC" EntityNamespace="HrApp.TC.Entity" ContextNamespace="HrApp.TC.Entity" Class="TCDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=139.224.119.91;Initial Catalog=CaiMoMo_TC;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TC_SummaryByDay" Member="TC_SummaryByDay">
+    <Type Name="TC_SummaryByDay">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Have" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Appraise" Member="TC_Appraise">
+    <Type Name="TC_Appraise">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StaffId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImageId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="TC_ParentEntity_TC_Appraise" Member="TC_ParentEntity" ThisKey="ID" OtherKey="ID" Type="TC_ParentEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Company" Member="TC_Company">
+    <Type Name="TC_Company">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImageId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Introduction" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TC_ParentEntity_TC_Company" Member="TC_ParentEntity" ThisKey="ID" OtherKey="ID" Type="TC_ParentEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_DepartmentSummary" Member="TC_DepartmentSummary">
+    <Type Name="TC_DepartmentSummary">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Money" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_DishesSummary" Member="TC_DishesSummary">
+    <Type Name="TC_DishesSummary">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FoodId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Evaluate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_EvaluationDetails" Member="TC_EvaluationDetails">
+    <Type Name="TC_EvaluationDetails">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StaffId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FoodId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Stars" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Menu" Member="TC_Menu">
+    <Type Name="TC_Menu">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Portion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_ParentEntity" Member="TC_ParentEntity">
+    <Type Name="TC_ParentEntity">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TC_ParentEntity_TC_Appraise" Member="TC_Appraise" ThisKey="ID" OtherKey="ID" Type="TC_Appraise" Cardinality="One" />
+      <Association Name="TC_ParentEntity_TC_Company" Member="TC_Company" ThisKey="ID" OtherKey="ID" Type="TC_Company" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Personnel" Member="TC_Personnel">
+    <Type Name="TC_Personnel">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProjectId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StaffId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Project" Member="TC_Project">
+    <Type Name="TC_Project">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReservationId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Money" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Reservation" Member="TC_Reservation">
+    <Type Name="TC_Reservation">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FoodId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Money" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Staff" Member="TC_Staff">
+    <Type Name="TC_Staff">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.Decimal" DbType="Decimal(11,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Substitution" Member="TC_Substitution">
+    <Type Name="TC_Substitution">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StaffId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FoodId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Group" Member="B_Group">
+    <Type Name="B_Group">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Updater" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LevelCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Store" Member="B_Store">
+    <Type Name="B_Store">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Updater" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LevelCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StoreCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Food" Member="TC_Food">
+    <Type Name="TC_Food">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Menu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SetMeal" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Brief" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Inventory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Intended" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Restrict]" Member="Restrict" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Department" Member="TC_Department">
+    <Type Name="TC_Department">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpperModuleID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Loc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_DepartmentUser" Member="TC_DepartmentUser">
+    <Type Name="TC_DepartmentUser">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Category" Member="TC_Category">
+    <Type Name="TC_Category">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReserveStart" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReserveOver" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FetchStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FetchEndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Image" Member="TC_Image">
+    <Type Name="TC_Image">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_FoodCategory" Member="TC_FoodCategory">
+    <Type Name="TC_FoodCategory">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FoodID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_OrderDetailed" Member="TC_OrderDetailed">
+    <Type Name="TC_OrderDetailed">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FoodID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Practical" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Stars" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Fetch]" Member="Fetch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_AccountManagement" Member="TC_AccountManagement">
+    <Type Name="TC_AccountManagement">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WeChat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OpenID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TC_Order" Member="TC_Order">
+    <Type Name="TC_Order">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderPrice" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OrderStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThinkChange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountManagementID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FetchStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

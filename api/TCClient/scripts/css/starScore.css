@@ -1,0 +1,68 @@
+﻿input {
+    white-space: nowrap;
+}
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    }
+
+* {
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img {
+    border: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: #303445;
+    tap-highlight-color: rgba(0,0,0,0);
+    focus-ring-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -moz-focus-ring-color: rgba(0, 0, 0, 0);
+}
+
+    a:visited {
+        color: inherit;
+    }
+
+input, button {
+    outline: none;
+}
+
+.score-wrapper{
+    background: #fff;
+    /*padding: 0.6rem 0.3rem;*/
+    /*display:flex;*/
+    display: inline-block;
+    /*align-items: center;*/
+}
+
+/*.wrap {
+    margin: 0 auto;
+}*/
+
+    .wrap .star-out {
+        height: 0.5rem;
+        width: 2.5rem;
+        background: url("../images/icon-star-default.png");
+        background-size: 0.5rem 0.5rem;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0;
+    }
+
+    .wrap .star-score {
+        width: 0rem;
+        height: 0.5rem;
+        background: url("../images/icon-star-active.png");
+        background-size: 0.5rem 0.5rem;
+    }

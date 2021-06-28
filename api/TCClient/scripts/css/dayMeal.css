@@ -1,0 +1,77 @@
+﻿body {
+}
+
+.container {
+    /*margin: 0 0.45rem;*/
+    font-size: 0.28rem;
+    background: #f2f2f2;
+    height: 100vh;
+}
+
+.day-title {
+    background: #f34343;
+    color: #fff;
+    font-size: 0.34rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.day-second {
+    background: #fff;
+    padding: 0 0.45rem;
+}
+
+.day-second-title {
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    color: #f34343;
+    border-bottom: 0.015rem solid #f3f3f3;
+}
+
+.day-meal {
+    padding: 0 0.45rem;
+    background: #fff;
+}
+
+.meal-title {
+    line-height: 1rem;
+    font-weight: bold;
+    border-bottom: 0.015rem solid #f3f3f3;
+}
+
+.meal-item {
+    line-height: 0.7rem;
+    padding-left: 0.15rem;
+}
+
+.selected {
+    background: #f2f2f2;
+    border-bottom: 0.015rem solid #e6e6e6;
+}
+
+.meal-fixed {
+    line-height: 0.7rem;
+    padding-left: 0.15rem;
+    margin-bottom:0.2rem;
+}
+
+
+.day-bottom {
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    /*position: fixed;
+    bottom: 0;*/
+}
+
+.day-cancel, .day-ok {
+    width:100%;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    text-align: center;
+}
+
+.day-ok {
+    color: #fff;
+    background: #f34343;
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap-theme.css" />
+    <script type="text/javascript" src="./bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                type: "get",
+                url: serviceUrl_pre +"/AjaxHandler.ashx?methodName=GetGroupInfo&GroupID=1000",
+                dataType: "text",
+                success: function (data) {
+                    var result = JSON.parse(data);
+                    if (result.ResultCode == 0) {
+                        var groupinfo = result.Data;
+                        alert(groupinfo.GroupName);
+                    } else {
+                        Host.showMsg(result.Message);
+                    }
+                },
+                error: function () {
+                    Host.showMsg("数据访问错误，请检查网络！");
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,1376 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyOrm.Common</name>
+    </assembly>
+    <members>
+        <member name="T:MyOrm.Common.ColumnAttribute">
+            <summary>
+            数据库列定义
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ColumnAttribute.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ColumnAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            <param name="isColumn">是否是数据库列</param>
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ColumnAttribute.#ctor(System.String)">
+            <summary>
+            指定列名的构造函数
+            </summary>
+            <param name="columnName">列名</param>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.IsColumn">
+            <summary>
+            是否是数据库列
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.ColumnName">
+            <summary>
+            数据库列名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.IsPrimaryKey">
+            <summary>
+            是否是主键
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.IsIdentity">
+            <summary>
+            是否是自增长标识
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.IsIndex">
+            <summary>
+            是否是索引
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.IsUnique">
+            <summary>
+            是否唯一
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.Length">
+            <summary>
+            数据库列长度
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.DbType">
+            <summary>
+            数据库列数据类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.ColumnMode">
+            <summary>
+            列类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnAttribute.AllowNull">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ForeignColumnAttribute">
+            <summary>
+            关联列信息
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ForeignColumnAttribute.#ctor(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="foreignType">关联的外部对象类型</param>
+        </member>
+        <member name="M:MyOrm.Common.ForeignColumnAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="foreignName">关联的外部表名称</param>
+        </member>
+        <member name="P:MyOrm.Common.ForeignColumnAttribute.Foreign">
+            <summary>
+            关联的外部表，可以为外部表对应的Type，也可以为TableJoin中的AliasName
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignColumnAttribute.Property">
+            <summary>
+             关联的外部对象属性
+             </summary>
+        </member>
+        <member name="T:MyOrm.Common.ForeignTypeAttribute">
+            <summary>
+            关联的外部实体类型定义
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ForeignTypeAttribute.#ctor(System.Type)">
+            <summary>
+            关联的外部实体类型
+            </summary>
+            <param name="objectType">外部实体的类型</param>
+        </member>
+        <member name="P:MyOrm.Common.ForeignTypeAttribute.ObjectType">
+            <summary>
+            外部实体类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignTypeAttribute.FilterProperty">
+            <summary>
+            附加筛选属性
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignTypeAttribute.FilterValue">
+            <summary>
+            筛选值
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableAttribute">
+            <summary>
+            数据库表属性，用来标识对象对应的数据库表
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableAttribute.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableAttribute.#ctor(System.String)">
+            <summary>
+            指定表名的构造函数
+            </summary>
+            <param name="tableName">表名</param>
+        </member>
+        <member name="P:MyOrm.Common.TableAttribute.TableName">
+            <summary>
+            数据库表名
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableJoinAttribute">
+            <summary>
+            数据库表在查询时的关联关系
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableJoinAttribute.#ctor(System.String,System.Type,System.String)">
+            <summary>
+            指定源表，关联的对象类型和外键生成关联信息
+            </summary>
+            <param name="sourceTable">关联的源表</param>
+            <param name="targetType">关联的对象类型</param>
+            <param name="foreignKeys">外键</param>
+        </member>
+        <member name="M:MyOrm.Common.TableJoinAttribute.#ctor(System.Type,System.Type,System.String)">
+            <summary>
+            指定源表，关联的对象类型和外键生成关联信息
+            </summary>
+            <param name="sourceTable">关联的源表</param>
+            <param name="targetType">关联的对象类型</param>
+            <param name="foreignKeys">外键</param>
+        </member>
+        <member name="M:MyOrm.Common.TableJoinAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            指定关联的对象类型和外键生成关联信息
+            </summary>
+            <param name="targetType">关联的对象类型</param>
+            <param name="foreignKey">外键</param>
+        </member>
+        <member name="P:MyOrm.Common.TableJoinAttribute.Source">
+            <summary>
+            源表，可以是字符串，也可以是对应的对象类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableJoinAttribute.TargetType">
+            <summary>
+            关联的对象类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableJoinAttribute.AliasName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableJoinAttribute.JoinType">
+            <summary>
+            关联类型，默认为TableJoinType.Left
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableJoinAttribute.ForeignKeys">
+            <summary>
+            外键，多个外键以","分隔，按照主键顺序排列
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.Condition">
+            <summary>
+            查询条件
+            <seealso cref="T:MyOrm.Common.SimpleCondition"/>
+            <seealso cref="T:MyOrm.Common.ConditionSet"/>  
+            <seealso cref="T:MyOrm.Common.ForeignCondition"/>    
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Condition.Opposite">
+            <summary>
+            逻辑求反
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.SimpleCondition">
+            <summary>
+            简单查询条件
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.#ctor(System.String,System.Object)">
+            <summary>
+            以默认操作符ConditionOperator.Equals生成简单查询条件
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="value">条件值</param>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.#ctor(System.String,MyOrm.Common.ConditionOperator,System.Object)">
+            <summary>
+            生成简单查询条件
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="op">条件比较符</param>
+            <param name="value">条件值</param>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.#ctor(System.String,MyOrm.Common.ConditionOperator,System.Object,System.Boolean)">
+            <summary>
+            生成简单查询条件
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="op">条件比较符</param>
+            <param name="value">条件值</param>
+            <param name="opposite">是否为非</param>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.Ensure(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.ToString">
+            <summary>
+            重写ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.Equals(System.Object)">
+            <summary>
+            重写Equals方法
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.SimpleCondition.GetHashCode">
+            <summary>
+            重写GetHashCode方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyOrm.Common.SimpleCondition.Property">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SimpleCondition.Value">
+            <summary>
+            条件值
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SimpleCondition.Operator">
+            <summary>
+            条件比较符
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ConditionSet">
+            <summary>
+            查询条件集合
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor(MyOrm.Common.ConditionJoinType)">
+            <summary>
+            指定连接类型创建查查询条件集合
+            </summary>
+            <param name="joinType">连接类型</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor(System.Collections.Generic.IEnumerable{MyOrm.Common.Condition})">
+            <summary>
+            以子查询条件集合初始化
+            </summary>
+            <param name="subConditions">子查询条件集合</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor(MyOrm.Common.Condition[])">
+            <summary>
+            以子查询条件集合初始化
+            </summary>
+            <param name="subConditions">子查询条件集合</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor(MyOrm.Common.ConditionJoinType,System.Collections.Generic.IEnumerable{MyOrm.Common.Condition})">
+            <summary>
+            指定连接类型，以子查询条件集合初始化
+            </summary>
+            <param name="joinType">连接类型</param>
+            <param name="subConditions">子查询条件集合</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.#ctor(MyOrm.Common.ConditionJoinType,MyOrm.Common.Condition[])">
+            <summary>
+            指定连接类型，以子查询条件集合初始化
+            </summary>
+            <param name="joinType">连接类型</param>
+            <param name="subConditions">子查询条件集合</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.Add(MyOrm.Common.Condition)">
+            <summary>
+            添加单个查询条件
+            </summary>
+            <param name="condition">子查询条件</param>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.Ensure(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.ConditionSet.ToString">
+            <summary>
+            重写ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyOrm.Common.ConditionSet.JoinType">
+            <summary>
+            连接类型，默认为ConditionJoinType.And
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ConditionSet.SubConditions">
+            <summary>
+            子查询条件集合
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ConditionJoinType">
+            <summary>
+            查询条件的连接关系枚举
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionJoinType.And">
+            <summary>
+            通过逻辑与（And）连接
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionJoinType.Or">
+            <summary>
+            通过逻辑与（Or）连接
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ConditionOperator">
+            <summary>
+            条件判断操作符
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.Equals">
+            <summary>
+            相等
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.LargerThan">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.SmallerThan">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.StartsWith">
+            <summary>
+            以指定字符串为开始（作为字符串比较）
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.EndsWith">
+            <summary>
+            以指定字符串为结尾（作为字符串比较）
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.Contains">
+            <summary>
+            包含制定字符串（作为字符串比较）
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.Like">
+            <summary>
+            匹配字符串格式（作为字符串比较）
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ConditionOperator.In">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ForeignCondition">
+            <summary>
+            关联外部对象的条件  
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ForeignCondition.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ForeignCondition.#ctor(System.String,MyOrm.Common.Condition)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="foreignKey">外键</param>
+            <param name="condition">外部对象的条件</param>
+        </member>
+        <member name="M:MyOrm.Common.ForeignCondition.#ctor(System.Type,MyOrm.Common.Condition)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="foreignType">外部对象的类型</param>
+            <param name="condition">外部对象的条件</param>
+        </member>
+        <member name="P:MyOrm.Common.ForeignCondition.ForeignType">
+            <summary>
+            关联对象类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignCondition.ForeignProperty">
+            <summary>
+            关联外部对象的属性
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignCondition.JoinedProperty">
+            <summary>
+            关联属性，与ForeignProperties对应
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignCondition.Condition">
+            <summary>
+            外部对象的条件
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ConditionConvert">
+            <summary>
+            从字符串生成条件，条件转换为字符串，以及判定对象是否符合条件等操作的静态类
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ConditionConvert.Ensure(MyOrm.Common.Condition,System.Object)">
+            <summary>
+            判定对象是否符合给定的条件
+            </summary>
+            <param name="condition">用来判定的条件</param>
+            <param name="target">判定对象</param>
+            <returns>判定结果</returns>
+        </member>
+        <member name="M:MyOrm.Common.ConditionConvert.ParseCondition(System.ComponentModel.PropertyDescriptor,System.String)">
+            <summary>
+            将属性和字符串转换为简单查询条件
+            </summary>
+            <param name="property">属性</param>
+            <param name="text">表示查询语句的字符串,可以使用"=","&lt;","&gt;","!","%","*","&lt;=","&gt;="为起始字符表示条件符号 </param>
+            <returns>简单查询条件</returns>
+        </member>
+        <member name="M:MyOrm.Common.ConditionConvert.ParseValue(System.ComponentModel.PropertyDescriptor,System.String)">
+            <summary>
+            字符串转化为对应属性类型的值
+            </summary>
+            <param name="property">属性定义</param>
+            <param name="value">输入字符串</param>
+            <returns>可被属性接受的值</returns>
+        </member>
+        <member name="M:MyOrm.Common.ConditionConvert.ToText(MyOrm.Common.ConditionOperator,System.Boolean,System.Object)">
+            <summary>
+            根据条件生成用于解析的字符串
+            </summary>
+            <param name="op">条件类型</param>
+            <param name="opposite">是否为非</param>
+            <param name="value">用于比较的值</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyOrm.Common.EnsureResult">
+            <summary>
+            条件判定结果
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.EnsureResult.False">
+            <summary>
+            不满足条件
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.EnsureResult.True">
+            <summary>
+            满足条件
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.EnsureResult.Undetermined">
+            <summary>
+            无法确定
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.IIndexedProperty">
+            <summary>
+            根据属性名访问属性值
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.IIndexedProperty.Item(System.String)">
+            <summary>
+            根据属性名设置和获取属性值
+            </summary>
+            <param name="propertyName">属性名</param>
+            <returns>属性的值</returns>
+        </member>
+        <member name="T:MyOrm.Common.IObjectDAO`1">
+            <summary>
+            实体类的增删改等基本操作的泛型接口
+            </summary>
+            <typeparam name="T">实体类类型</typeparam>
+        </member>
+        <member name="T:MyOrm.Common.IObjectViewDAO`1">
+            <summary>
+            实体类的查询操作的泛型接口
+            </summary>
+            <typeparam name="T">实体类类型</typeparam>
+        </member>
+        <member name="T:MyOrm.Common.IObjectViewDAO">
+            <summary>
+            实体类的查询操作的非范型接口
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.GetObject(System.Object[])">
+            <summary>
+            根据主键获取对象
+            </summary>
+            <param name="keys">主键，多个主键按照名称顺序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Exists(System.Object[])">
+            <summary>
+            根据主键检查对象是否存在
+            </summary>
+            <param name="keys">主键，多个主键按照名称顺序排列</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Exists(System.Object)">
+            <summary>
+            检查对象是否存在
+            </summary>
+            <param name="o">对象</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Exists(MyOrm.Common.Condition)">
+            <summary>
+            根据条件检查对象是否存在
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Count(MyOrm.Common.Condition)">
+            <summary>
+            得到满足条件的对象个数
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>满足条件的对象个数</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.SearchOne(MyOrm.Common.Condition)">
+            <summary>
+            根据条件获取单个对象
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>第一个符合条件的对象，若不存在则返回null</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Search(MyOrm.Common.Condition)">
+            <summary>
+            根据条件查询
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>符合条件的对象列表</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.Search(MyOrm.Common.Condition,MyOrm.Common.Sorting[])">
+            <summary>
+            根据条件查询
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <param name="orderBy">排列顺序，若为null则表示不指定顺序</param>
+            <returns>符合条件的对象列表</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO.SearchSection(MyOrm.Common.Condition,MyOrm.Common.SectionSet)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="condition">查询条件</param>
+            <param name="section">分页设定</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO`1.GetObject(System.Object[])">
+            <summary>
+            根据主键获取对象
+            </summary>
+            <param name="keys">主键，多个主键按照名称顺序排列</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO`1.SearchOne(MyOrm.Common.Condition)">
+            <summary>
+            根据条件获取单个对象
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>第一个符合条件的对象，若不存在则返回null</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO`1.Search(MyOrm.Common.Condition)">
+            <summary>
+            根据条件查询
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <returns>符合条件的对象列表</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO`1.Search(MyOrm.Common.Condition,MyOrm.Common.Sorting[])">
+            <summary>
+            根据条件查询
+            </summary>
+            <param name="condition">查询条件，若为null则表示没有条件</param>
+            <param name="orderBy">排列顺序，若为null则表示不指定顺序</param>
+            <returns>符合条件的对象列表</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectViewDAO`1.SearchSection(MyOrm.Common.Condition,MyOrm.Common.SectionSet)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="condition">查询条件</param>
+            <param name="section">分页设定</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyOrm.Common.IObjectDAO">
+            <summary>
+            实体类的增删改等基本操作的非泛型接口
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.Insert(System.Object)">
+            <summary>
+            添加对象
+            </summary>
+            <param name="o">待添加的对象</param>
+            <returns>是否成功添加</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.Update(System.Object)">
+            <summary>
+            更新对象
+            </summary>
+            <param name="o">待更新的对象</param>
+            <returns>是否成功更新</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.UpdateOrInsert(System.Object)">
+            <summary>
+            更新或添加对象，若存在则更新，若不存在则添加
+            </summary>
+            <param name="o">待更新或添加的对象</param>
+            <returns>是否更新或添加</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.UpdateValues(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},MyOrm.Common.Condition)">
+            <summary>
+            根据条件更新数据
+            </summary>
+            <param name="values">需要更新的属性及数值，key为属性名，value为数值</param>
+            <param name="condition">更新的条件</param>
+            <returns>更新的记录数</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.UpdateValues(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Object[])">
+            <summary>
+            根据主键更新数据
+            </summary>
+            <param name="values">需要更新的属性及数值，key为属性名，value为数值</param>
+            <param name="condition">更新的条件</param>
+            <returns>更新是否成功</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.Delete(System.Object)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="o">待删除的对象</param>
+            <returns>是否成功删除</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.DeleteByKeys(System.Object[])">
+            <summary>
+            根据主键删除对象
+            </summary>
+            <param name="keys">主键，多个主键按照主键名顺序排列</param>
+            <returns>是否成功删除</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO.Delete(MyOrm.Common.Condition)">
+            <summary>
+            根据条件删除对象
+            </summary>
+            <param name="condition">条件</param>
+            <returns>删除对象数量</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO`1.Insert(`0)">
+            <summary>
+            添加对象
+            </summary>
+            <param name="o">待添加的对象</param>
+            <returns>是否成功添加</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO`1.Update(`0)">
+            <summary>
+            更新对象
+            </summary>
+            <param name="o">待更新的对象</param>
+            <returns>是否成功更新</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO`1.UpdateOrInsert(`0)">
+            <summary>
+            更新或添加对象，若存在则更新，若不存在则添加
+            </summary>
+            <param name="o">待更新或添加的对象</param>
+            <returns>是否更新或添加</returns>
+        </member>
+        <member name="M:MyOrm.Common.IObjectDAO`1.Delete(`0)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="o">待删除的对象</param>
+            <returns>是否成功删除</returns>
+        </member>
+        <member name="T:MyOrm.Common.UpdateOrInsertResult">
+            <summary>
+            插入或更新操作的返回结果
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.UpdateOrInsertResult.Inserted">
+            <summary>
+            插入成功
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.UpdateOrInsertResult.Updated">
+            <summary>
+            更新成功
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.UpdateOrInsertResult.Failed">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.AttibuteTableInfoProvider">
+            <summary>
+            根据Attribute的表信息提供者
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableInfoProvider">
+            <summary>
+            表信息提供类
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableInfoProvider.GetTableDefinition(System.Type)">
+            <summary>
+            获取对象类型所对应的表定义
+            </summary>
+            <param name="objectType">对象类型</param>
+            <returns>对应的表信息</returns>
+        </member>
+        <member name="M:MyOrm.Common.TableInfoProvider.GetTableView(System.Type)">
+            <summary>
+            获取表信息
+            </summary>
+            <param name="objectType">对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.AttibuteTableInfoProvider.GetTableDefinition(System.Type)">
+            <summary>
+            根据对象类型得到对应的数据库表定义
+            </summary>
+            <param name="objectType">对象类型</param>
+            <returns>表定义</returns>
+        </member>
+        <member name="M:MyOrm.Common.AttibuteTableInfoProvider.GetTableView(System.Type)">
+            <summary>
+            根据对象类型得到表以及关联信息
+            </summary>
+            <param name="objectType">对象类型</param>
+            <returns>表信息</returns>
+        </member>
+        <member name="M:MyOrm.Common.AttibuteTableInfoProvider.GetColumnDefinition(System.Reflection.PropertyInfo)">
+            <summary>
+            根据属性得到对应字段的数据库列定义
+            </summary>
+            <param name="property">对象的属性</param>
+            <returns>数据库列定义</returns>
+        </member>
+        <member name="T:MyOrm.Common.ColumnRef">
+            <summary>
+            列的引用
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.SqlStatement">
+            <summary>
+            SQL项
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.SqlStatement.SqlNameFormat">
+            <summary>
+            Sql名称的格式
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.SqlStatement.FormattedName(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的名称
+            </summary>
+            <param name="sqlBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.SqlStatement.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+            <param name="sqlBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.SqlStatement.ToString">
+            <summary>
+            得到名称的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyOrm.Common.SqlStatement.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ColumnRef.#ctor(MyOrm.Common.Column)">
+            <summary>
+            创建列的引用
+            </summary>
+            <param name="column">列信息</param>
+        </member>
+        <member name="M:MyOrm.Common.ColumnRef.#ctor(MyOrm.Common.TableRef,MyOrm.Common.Column)">
+            <summary>
+            创建指定表的列引用
+            </summary>
+            <param name="table">表</param>
+            <param name="column">列引用</param>
+        </member>
+        <member name="M:MyOrm.Common.ColumnRef.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnRef.Table">
+            <summary>
+            列所在的表
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnRef.Column">
+            <summary>
+            列信息
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ForeignColumn">
+            <summary>
+            关联外表的列信息
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.Column">
+            <summary>
+            基本列信息
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.Column.#ctor(System.Reflection.PropertyInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="property">列对应的实体属性</param>
+        </member>
+        <member name="M:MyOrm.Common.Column.SetValue(System.Object,System.Object)">
+            <summary>
+            赋值
+            </summary>
+            <param name="target">要赋值的对象</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:MyOrm.Common.Column.GetValue(System.Object)">
+            <summary>
+            取值
+            </summary>
+            <param name="target">对象</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyOrm.Common.Column.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Column.Table">
+            <summary>
+            所属的表信息
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Column.PropertyName">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Column.PropertyType">
+            <summary>
+            列所对应的属性类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Column.Property">
+            <summary>
+            列对应的属性
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Column.ForeignType">
+            <summary>
+            关联的外部对象类型
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ForeignColumn.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignColumn.Foreign">
+            <summary>
+            所在外表的别名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignColumn.TargetColumn">
+            <summary>
+            指向的列
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ForeignColumn.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ColumnDefinition">
+            <summary>
+            数据库列信息
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.ColumnDefinition.#ctor(System.Reflection.PropertyInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="property">列对应的实体属性</param>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.IsPrimaryKey">
+            <summary>
+            是否是主键
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.IsIdentity">
+            <summary>
+            是否是自增长标识
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.IsIndex">
+            <summary>
+            是否是索引
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.IsUnique">
+            <summary>
+            是否唯一
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.AllowNull">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.ColumnDefinition.Mode">
+            <summary>
+            列操作模式
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.ColumnMode">
+            <summary>
+            列操作模式
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Full">
+            <summary>
+            所有操作
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Read">
+            <summary>
+            从数据库中读
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Update">
+            <summary>
+            向数据库更新
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Insert">
+            <summary>
+            向数据库添加
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Write">
+            <summary>
+            只写
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.ColumnMode.Final">
+            <summary>
+            不可更改
+            </summary>
+        </member>
+        <member name="T:FastMethodInvoker.FastInvokeHandler">
+            <summary>
+            FastInvoke生成的方法委托
+            </summary>
+            <param name="target">调用目标</param>
+            <param name="paramters">调用参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:FastMethodInvoker.FastInvoke">
+            <summary> 
+            引用自CodeProject的FastInvoke项目
+            http://www.codeproject.com/KB/cs/FastMethodInvoker.aspx
+            </summary>
+        </member>
+        <member name="M:FastMethodInvoker.FastInvoke.GetMethodInvoker(System.Reflection.MethodInfo)">
+            <summary>
+            获取FastInvokeHandler
+            </summary>
+            <param name="methodInfo">目标方法的MethodInfo定义</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyOrm.Common.Table">
+            <summary>
+            数据库表定义
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.Table.GetColumn(System.String)">
+            <summary>
+            根据属性名获得列定义，忽略大小写
+            </summary>
+            <param name="propertyName">属性名</param>
+            <returns>列定义，列名不存在则返回null</returns>
+        </member>
+        <member name="M:MyOrm.Common.Table.ClearCache">
+            <summary>
+            清空缓存
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.Table.ToString">
+            <summary>
+            重写ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.Table.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Table.Definition">
+            <summary>
+            对应的数据库表的定义
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Table.DefinitionType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Table.Columns">
+            <summary>
+            数据库表的列信息，包括关联的外部列
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Table.NamedColumnCache">
+            <summary>
+            属性名对应列的缓存
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableDefinition">
+            <summary>
+            数据库表的定义
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableDefinition.GetColumn(System.String)">
+            <summary>
+            根据属性名获得列定义，忽略大小写
+            </summary>
+            <param name="propertyName">属性名</param>
+            <returns>列定义，列名不存在则返回null</returns>
+        </member>
+        <member name="P:MyOrm.Common.TableDefinition.Definition">
+            <summary>
+            对应数据库表的定义
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableDefinition.ObjectType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableDefinition.Columns">
+            <summary>
+            数据库表的列定义
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableDefinition.Keys">
+            <summary>
+            主键列，按属性名称的顺序排列
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableRef">
+            <summary>
+            数据库表的引用
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableRef.#ctor(MyOrm.Common.TableDefinition)">
+            <summary>
+            创建数据库表的引用
+            </summary>
+            <param name="table">引用的数据库表定义</param>
+        </member>
+        <member name="M:MyOrm.Common.TableRef.GetColumn(System.String)">
+            <summary>
+            根据属性名获得列定义，忽略大小写
+            </summary>
+            <param name="propertyName">属性名</param>
+            <returns>列定义，列名不存在则返回null</returns>
+        </member>
+        <member name="M:MyOrm.Common.TableRef.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableRef.TableDefinition">
+            <summary>
+            对应数据库表的定义
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableRef.Columns">
+            <summary>
+            数据库表的列信息
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableRef.NamedColumnCache">
+            <summary>
+            属性名对应列的缓存
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.JoinedTable">
+            <summary>
+            关联的外部表
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.JoinedTable.#ctor(MyOrm.Common.TableDefinition)">
+            <summary>
+            创建关联表
+            </summary>
+            <param name="foreignTable">外部表的表定义</param>
+        </member>
+        <member name="M:MyOrm.Common.JoinedTable.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.JoinedTable.ForeignKeys">
+            <summary>
+            用来连接的外键
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.JoinedTable.JoinType">
+            <summary>
+            表连接类型
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.JoinedTable.ForeignPrimeKeys">
+            <summary>
+            关联表的主键
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableView">
+            <summary>
+            用于查询的关联表
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.TableView.#ctor(MyOrm.Common.TableDefinition,System.Collections.Generic.ICollection{MyOrm.Common.JoinedTable},System.Collections.Generic.ICollection{MyOrm.Common.Column})">
+            <summary>
+            创建用于查询的关联表
+            </summary>
+            <param name="table">主表</param>
+            <param name="joinedTables">关联的外表</param>
+            <param name="columns">查询的列集合</param>
+        </member>
+        <member name="M:MyOrm.Common.TableView.FormattedExpression(MyOrm.Common.ISqlBuilder)">
+            <summary>
+            格式化的表达式
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableView.JoinedTables">
+            <summary>
+            关联的外表集合
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.TableView.Definition">
+            <summary>
+            主表的定义
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.TableJoinType">
+            <summary>
+            表关联类型
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.TableJoinType.Inner">
+            <summary>
+            内连接
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.TableJoinType.Left">
+            <summary>
+            左连接
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.TableJoinType.Right">
+            <summary>
+            右连接
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.TableJoinType.Outer">
+            <summary>
+            全外连接
+            </summary>
+        </member>
+        <member name="F:MyOrm.Common.TableJoinType.Cross">
+            <summary>
+            交叉连接
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.SectionSet">
+            <summary>
+            分页查询时的分页设定
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SectionSet.StartIndex">
+            <summary>
+            需要得到的起始记录号
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SectionSet.SectionSize">
+            <summary>
+            需要得到的记录数
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SectionSet.Orders">
+            <summary>
+            排序项的集合，按优先级顺序排列
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.Sorting">
+            <summary>
+            排序项
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Sorting.PropertyName">
+            <summary>
+            排序属性名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.Sorting.Direction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.SqlBuildContext">
+            <summary>
+            SqlBuilder生成sql时的上下文
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SqlBuildContext.TableAliasName">
+            <summary>
+            表别名
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SqlBuildContext.Table">
+            <summary>
+            表信息
+            </summary>
+        </member>
+        <member name="P:MyOrm.Common.SqlBuildContext.Sequence">
+            <summary>
+            序列，用来生成表别名
+            </summary>
+        </member>
+        <member name="T:MyOrm.Common.Utility">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="M:MyOrm.Common.Utility.GetAttribute``1(System.Reflection.MemberInfo)">
+            <summary>
+            获取自定义Attribute
+            </summary>
+            <typeparam name="T">自定义Attribute的类型</typeparam>
+            <param name="memberInfo">需要获取自定义Attribute的MemberInfo</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.Utility.GetDbType(System.Type)">
+            <summary>
+            数据类型转换为DbType
+            </summary>
+            <param name="type">数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.Utility.GetDefaultLength(System.Data.DbType)">
+            <summary>
+            获取指定数据类型的默认长度
+            </summary>
+            <param name="columnType">数据库列的数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyOrm.Common.XmlTableInfoProvider.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            从对象的 XML 表示形式生成该对象。
+            </summary>
+            <param name="reader">对象从中进行反序列化的 System.Xml.XmlReader 流。</param>
+        </member>
+        <member name="M:MyOrm.Common.XmlTableInfoProvider.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            将对象转换为其 XML 表示形式。
+            </summary>
+            <param name="writer">对象要序列化为的 System.Xml.XmlWriter 流。</param>
+        </member>
+    </members>
+</doc>

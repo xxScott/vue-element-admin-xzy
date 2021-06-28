@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CanYinCenter_TC" Class="EasyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=139.224.119.91;Initial Catalog=CanYinCenter_TC;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CanYinCenterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BaseSystemConfig" Member="BaseSystemConfig">
+    <Type Name="BaseSystemConfig">
+      <Column Name="SystemConfigID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigAlias" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigValue" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysUnitTrans" Member="SysUnitTrans">
+    <Type Name="SysUnitTrans">
+      <Column Name="UID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitID1" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName1" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitID2" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName2" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="TransRate" Type="System.Decimal" DbType="Decimal(18,6) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseSystemConfigDefault" Member="BaseSystemConfigDefault">
+    <Type Name="BaseSystemConfigDefault">
+      <Column Name="SystemConfigID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemConfigName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigAlias" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigValue" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseUserRight" Member="BaseUserRight">
+    <Type Name="BaseUserRight">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RightID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAllow" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysCity" Member="SysCity">
+    <Type Name="SysCity">
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysGroupInfo" Member="SysGroupInfo">
+    <Type Name="SysGroupInfo">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PostCode" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BankType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BankAccountName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BankAccount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSingleStore" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="AppId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AppSecret" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AboutUs" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WXId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WelImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysGroupInfoExtra" Member="SysGroupInfoExtra">
+    <Type Name="SysGroupInfoExtra">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServerAddress" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DBName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="SysVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ServerAddressForRead" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysGroupUserExtra" Member="SysGroupUserExtra">
+    <Type Name="SysGroupUserExtra">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreList" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupUserType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsZhuFranchisee" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysOrganization" Member="SysOrganization">
+    <Type Name="SysOrganization">
+      <Column Name="UID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysProvince" Member="SysProvince">
+    <Type Name="SysProvince">
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysRegion" Member="SysRegion">
+    <Type Name="SysRegion">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RegioName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysRight" Member="SysRight">
+    <Type Name="SysRight">
+      <Column Name="RightID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RightName" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RightType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PageName" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysStoreInfo" Member="SysStoreInfo">
+    <Type Name="SysStoreInfo">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PostCode" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BankType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BankAccountName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BankAccount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSingleStore" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WeiXinID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CaiPuUID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CaiPuName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="BrandUID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="BrandName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="StoreType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistributionCenterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JingDu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WeiDu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImgUrl" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IfShowInWeixin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysStoreInfoExtra" Member="SysStoreInfoExtra">
+    <Type Name="SysStoreInfoExtra">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="WeChatName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDianCai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsWaiMai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsVirtualCard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsShowShopList" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GhID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AppID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AppSecret" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MchID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Lng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Lat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ConnactName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TelePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Bak1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Bak2" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Bak3" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Bak4" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Bak5" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsUseOwnWechat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHaveWeChatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseMMQBackUrl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnabled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsWeChatReCharge" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseMMQ" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsWaiDai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsMiniProgram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MiniAppID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MiniAppSecret" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Memo1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo4" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo5" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo6" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo7" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo8" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo9" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Memo10" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsAgreedShop" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FranchiseeUserID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FranchiseeBrandID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsContract" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExtraName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysUnit" Member="SysUnit">
+    <Type Name="SysUnit">
+      <Column Name="UID" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysGroupUser" Member="SysGroupUser">
+    <Type Name="SysGroupUser">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TrueName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentToken" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AllStore" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StoreList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="MACBind" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WXID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ShouQuanCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CheckCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastCheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsManager" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YouMian" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PasswordBak" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="OtherAccountType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherUserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherPassWord" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="IsGuestManager" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YouMianBiLi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZheKouBiLi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CaiMoMo_TC" EntityNamespace="Com.Caimomo.Entity" ContextNamespace="Com.Caimomo.Entity" Class="EasyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=139.224.119.91;Initial Catalog=CaiMoMo_TC;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CaiMoMo_TCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SysGroupUser" Member="SysGroupUser">
+    <Type Name="SysGroupUser">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TrueName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentToken" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AllStore" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StoreList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="MACBind" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WXID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ShouQuanCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CheckCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastCheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsManager" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YouMian" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PasswordBak" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="OtherAccountType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherUserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherPassWord" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="IsGuestManager" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YouMianBiLi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZheKouBiLi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseUserRight" Member="BaseUserRight">
+    <Type Name="BaseUserRight">
+      <Column Name="UID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RightID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAllow" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseSystemConfig" Member="BaseSystemConfig">
+    <Type Name="BaseSystemConfig">
+      <Column Name="SystemConfigID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigAlias" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigValue" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseSystemConfigDefault" Member="BaseSystemConfigDefault">
+    <Type Name="BaseSystemConfigDefault">
+      <Column Name="SystemConfigID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemConfigName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigAlias" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigValue" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="AddUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemConfigTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
